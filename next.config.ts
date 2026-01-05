@@ -1,0 +1,23 @@
+import type {NextConfig} from 'next';
+
+const repo = 'portfolio';
+const assetPrefix = `/${repo}/`;
+const basePath = `/${repo}`;
+
+const nextConfig: NextConfig = {
+  /* config options here */
+  output: 'export',
+  assetPrefix: assetPrefix,
+  basePath: basePath,
+  images: {
+    unoptimized: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+};
+
+export default nextConfig;
